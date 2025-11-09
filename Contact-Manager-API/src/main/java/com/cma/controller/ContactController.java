@@ -86,7 +86,7 @@ public class ContactController {
         return ResponseEntity.ok("Deleted " + count + " contacts");
     }
 
-    @PostMapping("/mass-contacts")
+    @PostMapping("/mass")
     public ResponseEntity<List<Contact>> saveContact(@RequestBody List<ContactDto> contactDto) {
         List<Contact> contactResponseDtoList = contactService.addMultipleContact(contactDto);
         if(contactResponseDtoList.isEmpty()){
